@@ -2,8 +2,11 @@
 @import 'global';
 @import 'fonts';
 
-// start header
 
+// start header
+.header{
+    background-color: #fff;
+}
 .header__top-inner{
     display: flex;
     justify-content: space-between;
@@ -87,14 +90,34 @@
     display: flex;
     align-items: center;
 }
-.header__btn-login--off{
-    display: none;
-}
+// .header__btn-login--off{
+//     display: none;
+// }
+// .header__btn-logout{
+//     display: none;
+//     &.header__btn-login--on{
+//         display: block;
+//     }
+// }
+.header__btn-login,
+.header__btn-register,
 .header__btn-logout{
-    display: none;
-    &.header__btn-login--on{
+    &.header__btn--on{
         display: block;
     }
+}
+.header__btn-login,
+.header__btn-register,
+.header__btn-logout{
+    &.header__btn--off{
+        display: none;
+    }
+}
+.header__btn--off{
+    display: none;
+}
+.header__btn--on{
+    display: block;
 }
 .notification{
     span{
@@ -107,12 +130,12 @@
     }
 }
 .basket{
+    margin-right: 20px;
     span{
         background-color: $green;
     }
 }
 .user{
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -192,6 +215,7 @@
     height: 0;
     overflow: hidden;
     transition: all .3s;
+    z-index: 1;
 }
 .basket__box,
 .notification__box,
@@ -205,6 +229,7 @@
         .circle__menu{
             overflow: hidden;
             height: auto;
+            z-index: 2;
         }
         .circle__item{
             padding: 23px;
@@ -296,6 +321,10 @@
 }
 .icons-color::before{
     color: $tomate;
+}
+.header__btn-menu,
+.header__btn{
+    display: none;
 }
 // end header
 // start search
@@ -1159,3 +1188,6 @@ button.icon-unsorted{
 }
 //end product-page
   
+
+
+@import 'media';
