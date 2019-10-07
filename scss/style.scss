@@ -2123,9 +2123,6 @@ button.icon-unsorted{
         span{
             color: $green;
         }
-        &::placeholder{
-            color: #707070;
-        }
     }
     select,
     input,
@@ -2136,6 +2133,9 @@ button.icon-unsorted{
         background-color: #f9f9f9;
         height: 40px;
         padding: 0px 18px;
+        &::placeholder{
+            color: #707070;
+        }
     }
     textarea{
         padding: 8px 18px;
@@ -2224,6 +2224,171 @@ button.icon-unsorted{
 
 
 //end upload
+//start withdrawals
+
+.withdrawals__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals__col{
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals__title{
+    font-size: 24px;
+    @include f500;
+    padding: 18px 32px 24px;
+    color: $bg;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+}
+.withdrawals__content{
+    padding-left: 35px;
+    padding-right: 40px;
+    button{
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+}
+.withdrawals__form-line{
+    margin-bottom: 25px;
+    label{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        margin-bottom: 15px;
+        color: $bg;
+        span{
+            color: $green;
+        }
+    }
+    input,
+    select{
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+        height: 40px;
+        padding: 0px 18px;
+        &::placeholder{
+            color: #707070;
+        }
+        
+    }
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select{
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        text-shadow: none;
+        color: #707070;
+        font-family: 'Roboto-Regular', sans-serif;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+    .jq-selectbox__dropdown{
+        top: 35px;
+    }
+    .jq-file{
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        height: 40px;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name{
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0px;
+        box-sizing: border-box;
+        padding: 0px 18px;
+        line-height: 40px;
+        height: 40px;
+        width: 100%;
+        border: none;
+        border-bottom-color: transparent;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+    }
+    input[type="file"]{
+        outline: none;
+    }
+    .jq-file__browse{
+        text-shadow: none;
+        position: absolute;
+        box-shadow: none;
+        background: #fff;
+        border-radius: 0px;
+        border: 1px solid #d7d7d7;
+        font-size: 12px;
+        color: #444;
+        padding: 0 12px;
+        height: 26px;
+        line-height: 26px;
+        top: 6px;
+        right: auto;
+        left: 9px;
+    }
+}
+.withdrawals__content-items{
+    margin-bottom: 35px;
+}
+.withdrawals__content-item{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    display: 13px;
+    color: #444;
+    &:nth-child(odd){
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals__content-date{
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+}
+.withdrawals__content-email{
+    width: 180px;
+    @include f500;
+}
+.withdrawals__content-price{
+    width: 70px;
+    @include f700;
+}
+.withdrawals__content-status{
+    width: 88px;
+    @include f700;
+    &.withdrawals__content-pending{
+
+    }
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+}
+
+//end withdrawals
+
 
 @import 'media';
 
