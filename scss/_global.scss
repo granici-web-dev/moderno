@@ -28,6 +28,7 @@ body{
     color: $text;
     font-weight: 400;
     overflow-x: hidden;
+    // width: 100vh;
 }
 .wrapper{
     display: flex;
@@ -74,6 +75,8 @@ body{
 .breadcrumbs{
     &__inner{
         padding: 45px 0px 40px;
+        overflow: hidden;
+        width: 1200px;
     }
     &__list{
         li{
